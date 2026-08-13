@@ -1,0 +1,1 @@
+# booksstores_around_manila
