@@ -41,6 +41,62 @@ header p {
     font-size: 17px;
 }
 
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 12px;
+    background-color: var(--dark);
+    color: var(--light);
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+fieldset {
+    border: 2px solid var(--brand);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+legend {
+    color: var(--gold);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-left: 10px;
+    accent-color: var(--gold);
+}
+
+button {
+    background-color: var(--brand);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+input:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
 nav {
     margin-top: 20px;
 }
