@@ -1,208 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suggest a Bookstore - Book Stores around Manila</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="site-header">
+    <!-- Added missing div.page wrapper -->
+    <div class="page">
 
-    <h1>Book Stores around Manila</h1>
+        <header class="site-header">
+            <h1>Book Stores around Manila</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="suggest.html">Suggest a Place</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="suggest.html">Suggest a Place</a></li>
-        </ul>
-    </nav>
+        <!-- Added class="main-content" -->
+        <main class="main-content">
 
-</header>
+            <section class="card">
 
-    <main>
+                <h2>Suggest a Bookstore</h2>
+                <p>
+                    Do you know a great bookstore around Manila that should be
+                    included in our guide? Share it with us!
+                </p>
 
-        <section class="product-card">
+                <form>
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
 
-            <h2>Suggest a Bookstore</h2>
+                    <label for="bookstore">Bookstore Name</label>
+                    <input
+                        type="text"
+                        id="bookstore"
+                        name="bookstore"
+                        placeholder="Enter the bookstore name"
+                        required
+                    >
 
-            <p>
-                Do you know a great bookstore around Manila that should be
-                included in our guide? Share it with us!
-            </p>
+                    <label for="location">Bookstore Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="Enter the location"
+                        required
+                    >
 
-            <form>
+                    <fieldset>
+                        <legend>What type of bookstore is it?</legend>
 
-                <label for="name">Your Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+                        <label>
+                            <input
+                                type="radio"
+                                id="academic"
+                                name="category"
+                                value="Academic"
+                                required
+                            >
+                            Academic
+                        </label>
 
+                        <label>
+                            <input
+                                type="radio"
+                                id="fiction"
+                                name="category"
+                                value="Fiction"
+                            >
+                            Fiction and Literature
+                        </label>
 
-                <label for="bookstore">Bookstore Name</label>
-                <input
-                    type="text"
-                    id="bookstore"
-                    name="bookstore"
-                    placeholder="Enter the bookstore name"
-                    required
-                >
+                        <label>
+                            <input
+                                type="radio"
+                                id="used"
+                                name="category"
+                                value="Used Books"
+                            >
+                            Used or Second-Hand Books
+                        </label>
 
+                        <label>
+                            <input
+                                type="radio"
+                                id="general"
+                                name="category"
+                                value="General"
+                            >
+                            General Bookstore
+                        </label>
+                    </fieldset>
 
-                <label for="location">Bookstore Location</label>
-                <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    placeholder="Enter the location"
-                    required
-                >
+                    <fieldset>
+                        <legend>What's good about this bookstore?</legend>
 
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="affordable"
+                                name="features"
+                                value="Affordable"
+                            >
+                            Affordable books
+                        </label>
 
-                <fieldset>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="variety"
+                                name="features"
+                                value="Wide variety"
+                            >
+                            Wide variety of books
+                        </label>
 
-                    <legend>What type of bookstore is it?</legend>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="quiet"
+                                name="features"
+                                value="Quiet"
+                            >
+                            Quiet and comfortable
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            id="academic"
-                            name="category"
-                            value="Academic"
-                            required
-                        >
-                        Academic
-                    </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="student"
+                                name="features"
+                                value="Student friendly"
+                            >
+                            Student-friendly
+                        </label>
+                    </fieldset>
 
-                    <label>
-                        <input
-                            type="radio"
-                            id="fiction"
-                            name="category"
-                            value="Fiction"
-                        >
-                        Fiction and Literature
-                    </label>
+                    <label for="description">Why do you recommend this bookstore?</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Tell us about the bookstore..."
+                        required
+                    ></textarea>
 
-                    <label>
-                        <input
-                            type="radio"
-                            id="used"
-                            name="category"
-                            value="Used Books"
-                        >
-                        Used or Second-Hand Books
-                    </label>
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
 
-                    <label>
-                        <input
-                            type="radio"
-                            id="general"
-                            name="category"
-                            value="General"
-                        >
-                        General Bookstore
-                    </label>
+                    <button type="submit">Send Recommendation</button>
+                </form>
 
-                </fieldset>
+            </section>
 
+        </main>
 
-                <fieldset>
+        <!-- Added class="site-footer" -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Book Stores around Manila. All Rights Reserved.</p>
+        </footer>
 
-                    <legend>What's good about this bookstore?</legend>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="affordable"
-                            name="features"
-                            value="Affordable"
-                        >
-                        Affordable books
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="variety"
-                            name="features"
-                            value="Wide variety"
-                        >
-                        Wide variety of books
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="quiet"
-                            name="features"
-                            value="Quiet"
-                        >
-                        Quiet and comfortable
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="student"
-                            name="features"
-                            value="Student friendly"
-                        >
-                        Student-friendly
-                    </label>
-
-                </fieldset>
-
-
-                <label for="description">
-                    Why do you recommend this bookstore?
-                </label>
-
-                <textarea
-                    id="description"
-                    name="description"
-                    placeholder="Tell us about the bookstore..."
-                    required
-                ></textarea>
-
-
-                <label for="email">Your Email</label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
-
-
-                <input
-                    type="submit"
-                    value="Send Recommendation"
-                >
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            &copy; 2026 Book Stores around Manila. All Rights Reserved.
-        </p>
-
-    </footer>
+    </div>
 
 </body>
 </html>

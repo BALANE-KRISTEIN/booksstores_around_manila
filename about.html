@@ -1,79 +1,75 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Book Stores around manila</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="site-header">
+    <!-- Wrapped everything inside <div class="page"> for max-width and centering -->
+    <div class="page">
 
-    <h1>Book Stores around Manila</h1>
+        <header class="site-header">
+            <h1>Book Stores around Manila</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="suggest.html">Suggest a Place</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="suggest.html">Suggest a Place</a></li>
-        </ul>
-    </nav>
+        <!-- Added class="main-content" -->
+        <main class="main-content">
 
-</header>
+            <!-- Wrapped cards inside product-grid so they align side-by-side or neatly centered -->
+            <div class="product-grid">
 
+                <section class="product-card">
+                    <h2>Kristein Cassey S. Balane</h2>
+                    <p>
+                       I'm Kris, a person who enjoys finding the best bookstores
+                       in random places around Metro Manila. As a bookworm,
+                       I had to find where I could get books.
+                    </p>
+                    <img src="bookshelf.jpg" alt="books">
+                </section>
 
-    <main>
+                <section class="product-card">
+                    <h2>The Story Behind Our Shop</h2>
+                    <p>
+                        Our shop was created because of my love for animals and my
+                        interest in learning more about different species. I wanted
+                        to create a place where people can discover interesting
+                        pets while also appreciating the beauty and uniqueness
+                        of animals.
+                    </p>
+                    <p>
+                        The shop represents my passion for animals, especially the
+                        unusual and often misunderstood ones. Through this shop,
+                        I hope to share my interests with other people and encourage
+                        them to learn more about animals.
+                    </p>
+                    <p>
+                        We also promote free adoption because every animal deserves
+                        a safe and loving home.
+                    </p>
+                </section>
 
-        <section class="product-card">
+            </div>
 
-        <h2>Kristein Cassey S. Balane</h2>
+        </main>
 
-        <p>
-           I'm Kris, a person who enjoys finding the best bookstores
-           in random places around Metro Manila. As a bookworm,
-           I had to find where I could get books.
-        </p>
+        <!-- Added class="site-footer" -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Book Stores around manila. All Rights Reserved.</p>
+        </footer>
 
-        <img src="bookshelf.jpg" alt="books">
-         </section>
-
-
-        <section class="product-card">
-
-            <h2>The Story Behind Our Shop</h2>
-
-            <p>
-                Our shop was created because of my love for animals and my
-                interest in learning more about different species. I wanted
-                to create a place where people can discover interesting
-                pets while also appreciating the beauty and uniqueness
-                of animals.
-            </p>
-
-            <p>
-                The shop represents my passion for animals, especially the
-                unusual and often misunderstood ones. Through this shop,
-                I hope to share my interests with other people and encourage
-                them to learn more about animals.
-            </p>
-
-            <p>
-                We also promote free adoption because every animal deserves
-                a safe and loving home.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        <p>&copy; 2026 Book Stores around manila. All Rights Reserved.</p>
-    </footer>
+    </div>
 
 </body>
 </html>
-```

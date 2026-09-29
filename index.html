@@ -1,123 +1,209 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Book Stores around Manila</title>
+<html lang="en">
 
-  <link rel="stylesheet" href="style.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- REQUIRED FOR RESPONSIVE DESIGN -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Book Stores around Manila</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <header class="site-header">
+<div class="page">
 
-    <h1>Book Stores around Manila</h1>
+    <!-- =========================
+         HEADER
+         ========================= -->
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="suggest.html">Suggest a Place</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
 
-</header>
+        <h1>Book Stores around Manila</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
 
 
-   <main>
+    <!-- =========================
+         SIDEBAR
+         ========================= -->
 
-        <section class="intro">
+    <aside class="sidebar">
 
-            <h2>Book Stores around Manila</h2>
+        <h2>Book Stores</h2>
 
-            <p>
-                This is a guide for you to find best Book Stores in Manila
-      where you can find your favorite books.
-            </p>
+        <a href="places/book-stop.html">
+            The Book Stop Project
+        </a>
+
+        <a href="places/books-underground.html">
+            Books from Underground
+        </a>
+
+        <a href="places/booksale.html">
+            Booksale
+        </a>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main class="main-content">
+
+        <h2>Book Stores around Manila</h2>
+
+        <p>
+            Discover bookstores around Manila where you can
+            find interesting, affordable, and unique books.
+        </p>
+
+
+        <!-- BOOKSTORE CARDS -->
+
+        <section class="book-grid">
+
+
+            <!-- =========================
+                 THE BOOK STOP PROJECT
+                 ========================= -->
+
+            <article class="book-card">
+
+                <img
+                    src="Bookstop.jpeg"
+                    alt="The Book Stop Project"
+                >
+
+                <h2>The Book Stop Project</h2>
+
+                <p>
+                    Located at Plaza Roma in Intramuros,
+                    The Book Stop Project provides a space
+                    where people can discover and exchange
+                    books while enjoying the historic
+                    surroundings of Manila.
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Plaza Roma, Intramuros
+                </p>
+
+                <p>
+                    <a href="places/book-stop.html">
+                        Read more
+                    </a>
+                </p>
+
+            </article>
+
+
+            <!-- =========================
+                 BOOKS FROM UNDERGROUND
+                 ========================= -->
+
+            <article class="book-card">
+
+                <img
+                    src="underground.jpg"
+                    alt="Books from Underground"
+                >
+
+                <h2>Books from Underground</h2>
+
+                <p>
+                    Books from Underground is located at
+                    the Lagusnilad Underpass and offers
+                    readers an interesting selection of
+                    books in an unusual location.
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Lagusnilad Underpass
+                </p>
+
+                <p>
+                    <a href="places/books-underground.html">
+                        Read more
+                    </a>
+                </p>
+
+            </article>
+
+
+            <!-- =========================
+                 BOOKSALE
+                 ========================= -->
+
+            <article class="book-card">
+
+                <img
+                    src="Booksale.jpg"
+                    alt="Booksale"
+                >
+
+                <h2>Booksale</h2>
+
+                <p>
+                    Booksale offers affordable books for
+                    readers looking for different titles
+                    and genres. The Pedro Gil branch is
+                    one of the bookstores included in
+                    this list.
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Pedro Gil Branch
+                </p>
+
+                <p>
+                    <a href="places/booksale.html">
+                        Read more
+                    </a>
+                </p>
+
+            </article>
+
 
         </section>
 
-    <section class="product-grid">
-
-     <article class="product-card">
-
-      <h2>The Book Stop Project: A pop-up literary haven</h2>
-
-      <p>
-        Plaza Roma, Intramuros, Philippines
-      </p>
-
-      <p>
-        This is a book project in Intramuros wherein you can exchange,
-        swap, take and leave books in this pop-up library.
-      </p>
-
-      <img src="Bookstop.jpeg" alt="Intramuros Library">
-
-      <p class="read-more">
-    <a href="places/book-stop.html">Read More →</a>
-</p>
-
-    </article>
+    </main>
 
 
-     <article class="product-card">
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
-      <h3>Books from Underground: The ultimate hidden gem</h3>
+    <footer class="site-footer">
 
-      <p>
-        Lagusnilad Underpass, Padre Burgos Avenue, Manila
-      </p>
+        <p>
+            &copy; 2026 Book Stores around Manila.
+            All rights reserved.
+        </p>
 
-      <p>
-        This bookstore is located in a pedestrian underpass in Manila
-        near Manila City Hall. They offer historical and academic books
-        that students from nearby universities and schools could buy.
-      </p>
+    </footer>
 
-      <img src="underground.jpg" alt="Books From Underground">
-
-      <p class="read-more">
-    <a href="places/books-underground.html">Read More →</a>
-</p>
-    </article>
-
-
-     <article class="product-card">
-
-      <h4>Booksale: The most affordable books in Manila</h4>
-
-      <p>
-        Booksale Pedro Gil Branch, 1602 Leon Guinto St., Manila
-      </p>
-
-      <p>
-        Booksale offers affordable books. They have academic, religious,
-        fictional, and children's books. In this store, they have promos
-        for as low as 10 pesos, so you can find your favorite books.
-      </p>
-
-      <img src="Booksale.jpg" alt="Booksale">
-
-     <p class="read-more">
-    <a href="places/booksale.html">Read More →</a>
-</p>
-
-    </article>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-
-    <p>
-      &copy; 2026 Book Stores around Manila.
-      All Rights Reserved.
-    </p>
-
-  </footer>
+</div>
 
 </body>
+
 </html>

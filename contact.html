@@ -1,179 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Book Stores around Manila</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="site-header">
+    <div class="page">
 
-    <h1>Book Stores around Manila</h1>
+        <header class="site-header">
+            <h1>Book Stores around Manila</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="suggest.html">Suggest a Place</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="suggest.html">Suggest a Place</a></li>
-        </ul>
-    </nav>
+        <main class="main-content">
 
-</header>
+            <!-- Top row: 3 info cards -->
+            <div class="product-grid">
 
+                <section class="product-card">
+                    <h2>Get in Touch</h2>
+                    <p>
+                        If you have questions about different bookstores,
+                        feel free to contact us.
+                    </p>
+                </section>
 
-    <main>
+                <section class="product-card">
+                    <h2>Contact Information</h2>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:krisBookStoresaroundmanila@gmail.com">
+                            krisBookStoresaroundmanila@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <strong>Phone:</strong><br>
+                        0912-345-6789
+                    </p>
+                    <p>
+                        <strong>Facebook:</strong><br>
+                        Bookstores around Manila
+                    </p>
+                </section>
 
-        <section class="product-card">
+                <section class="product-card">
+                    <h2>Visit Us</h2>
+                    <p>
+                        <strong>Location:</strong><br>
+                        Philippines
+                    </p>
+                    <p>
+                        Feel free to reach out to us for questions,
+                        inquiries, or information about the available books.
+                    </p>
+                </section>
 
-            <h2>Get in Touch</h2>
+            </div>
 
-            <p>
-                If you have questions about different bookstores,
-                feel free to contact us.
-            </p>
+            <!-- Bottom row: Form gets its own full-width card -->
+            <section class="card" style="margin-top: 25px;">
+                <h2>Send Us a Message</h2>
 
-        </section>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Your Details</legend>
 
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
 
-        <section class="product-card">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
 
-            <h2>Contact Information</h2>
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a subject</option>
+                            <option value="book-inquiry">Book Inquiry</option>
+                            <option value="store-information">Store Information</option>
+                            <option value="book-recommendation">Book Recommendation</option>
+                            <option value="other">Something Else</option>
+                        </select>
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:krisBookStoresaroundmanila@gmail.com">
-                    krisBookStoresaroundmanila@gmail.com
-                </a>
-            </p>
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
 
-            <p>
-                <strong>Phone:</strong>
-                0912-345-6789
-            </p>
+                        <div style="margin-top: 15px;">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
 
-            <p>
-                <strong>Facebook:</strong>
-                Bookstores around Manila
-            </p>
+        </main>
 
-        </section>
+        <footer class="site-footer">
+            <p>&copy; 2026 Book Stores around Manila. All Rights Reserved.</p>
+        </footer>
 
-
-        <section class="product-card">
-
-            <h2>Visit Us</h2>
-
-            <p>
-                <strong>Location:</strong>
-                Philippines
-            </p>
-
-            <p>
-                Feel free to reach out to us for questions,
-                inquiries, or information about the available books.
-            </p>
-
-        </section>
-
-
-        <section class="product-card">
-
-            <h2>Send Us a Message</h2>
-
-            <form action="#" method="post">
-
-                <fieldset>
-
-                    <legend>Your Details</legend>
-
-
-                    <label for="name">Name</label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-
-                    <label for="email">Email</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-
-                    <label for="subject">Subject</label>
-
-                    <select
-                        id="subject"
-                        name="subject"
-                        required
-                    >
-
-                        <option value="">
-                            Choose a subject
-                        </option>
-
-                        <option value="book-inquiry">
-                            Book Inquiry
-                        </option>
-
-                        <option value="store-information">
-                            Store Information
-                        </option>
-
-                        <option value="book-recommendation">
-                            Book Recommendation
-                        </option>
-
-                        <option value="other">
-                            Something Else
-                        </option>
-
-                    </select>
-
-
-                    <label for="message">Message</label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Write your message here..."
-                        required
-                    ></textarea>
-
-
-                    <button type="submit">
-                        Send message
-                    </button>
-
-                </fieldset>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            &copy; 2026 Book Stores around Manila.
-            All Rights Reserved.
-        </p>
-
-    </footer>
+    </div>
 
 </body>
 </html>
