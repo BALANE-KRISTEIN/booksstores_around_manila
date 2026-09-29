@@ -25,46 +25,37 @@ body {
 }
 
 /* ==================================================
-   PAGE GRID LAYOUT (Activity 7.3)
+   1. BASE: MOBILE-FIRST (Single Column Layout)
    ================================================== */
 
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side     main"
-        "foot     foot";
-    gap: 20px;
+        "masthead"
+        "main"
+        "side"
+        "foot";
+    gap: 16px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Map Grid Areas */
+/* Map elements to grid areas */
 header, .site-header { grid-area: masthead; }
 aside, .sidebar      { grid-area: side; }
 main, .main-content  { grid-area: main; }
 footer, .site-footer { grid-area: foot; }
 
-/* Handle pages without a sidebar (About, Contact, Suggest) */
-.page:not(:has(aside)):not(:has(.sidebar)) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "masthead"
-        "main"
-        "foot";
-}
-
-/* ==================================================
-   HEADER & NAVIGATION
-   ================================================== */
-
+/* Header & Nav (Mobile Layout) */
 .site-header {
     background: var(--brand);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 30px;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
     border-bottom: 4px solid var(--gold);
     border-radius: 8px;
 }
@@ -72,20 +63,22 @@ footer, .site-footer { grid-area: foot; }
 .site-header h1 {
     margin: 0;
     color: var(--light);
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
 .site-header nav {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .site-header nav a {
     color: var(--light);
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 14px;
+    padding: 8px 12px;
     border-radius: 5px;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -95,17 +88,13 @@ footer, .site-footer { grid-area: foot; }
     color: var(--dark);
 }
 
-/* ==================================================
-   SIDEBAR
-   ================================================== */
-
+/* Sidebar (Mobile Layout) */
 .sidebar {
     background: var(--card);
     border: 1px solid var(--brand);
     border-left: 4px solid var(--gold);
     border-radius: 8px;
     padding: 20px;
-    height: fit-content;
 }
 
 .sidebar h2 {
@@ -130,10 +119,7 @@ footer, .site-footer { grid-area: foot; }
     padding-left: 6px;
 }
 
-/* ==================================================
-   MAIN CONTENT & BOOK/PRODUCT CARDS
-   ================================================== */
-
+/* Main Content & Book Grid */
 .main-content {
     min-width: 0;
 }
@@ -143,16 +129,16 @@ footer, .site-footer { grid-area: foot; }
     margin-top: 0;
 }
 
-/* Grid for the cards inside main content */
+/* Responsive Place Card Grid using repeat(auto-fit, minmax(...)) */
 .book-grid,
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-/* Card Styling */
+/* Book/Product Cards */
 .book-card,
 .product-card,
 .card {
@@ -202,10 +188,7 @@ footer, .site-footer { grid-area: foot; }
     text-decoration: underline;
 }
 
-/* ==================================================
-   FORMS & INPUTS (Contact & Suggest)
-   ================================================== */
-
+/* Form Styles */
 form fieldset {
     border: 1px solid var(--brand);
     border-radius: 6px;
@@ -260,10 +243,7 @@ form button:hover {
     color: var(--dark);
 }
 
-/* ==================================================
-   FOOTER
-   ================================================== */
-
+/* Footer */
 .site-footer {
     background: var(--brand);
     color: var(--light);
@@ -274,28 +254,31 @@ form button:hover {
 }
 
 /* ==================================================
-   RESPONSIVE DESIGN (Mobile)
+   2. ENHANCE AT TABLET AND UP (@media min-width)
    ================================================== */
 
-@media (max-width: 768px) {
-    .page,
-    .page:not(:has(aside)):not(:has(.sidebar)) {
-        grid-template-columns: 1fr;
+@media (min-width: 700px) {
+
+    .page {
+        grid-template-columns: 220px 1fr;
         grid-template-areas:
-            "masthead"
-            "side"
-            "main"
-            "foot";
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
     }
 
     .site-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 30px;
     }
 
-    .site-header nav {
-        flex-wrap: wrap;
-        justify-content: center;
+    .site-header h1 {
+        font-size: 26px;
+    }
+
+    .sidebar {
+        height: fit-content;
     }
 }
